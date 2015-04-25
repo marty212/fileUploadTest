@@ -101,6 +101,7 @@ public class ActionWeb extends ServerResource {
                 // back to the client.
                 if (found) {
                     stats.append("status", "good");
+                    stats.append("number", String.valueOf(i - 1));
                     return stats.build().toString();
                 } else {
                     stats.append("status", "bad");
