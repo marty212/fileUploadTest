@@ -35,7 +35,7 @@ public class ActionWeb extends ServerResource {
 
         int j;
         try {
-            j = (int) map.get("number");
+            j = Integer.parseInt((String) map.get("number"));
         } catch (Exception e) {
             stats.append("status", "bad");
             stats.append("extra", "not an int");
